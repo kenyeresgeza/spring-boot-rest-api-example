@@ -1,4 +1,4 @@
-# Spring boot REST API example
+# Spring Boot REST API example
 
 # Project Title
 
