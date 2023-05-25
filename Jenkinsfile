@@ -12,6 +12,7 @@ pipeline {
       steps {
         echo 'Building the application (Gradle)'
         sh 'gradle -version'
+        sh 'gradle clean jar'
       }
     }
      
