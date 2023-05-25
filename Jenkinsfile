@@ -1,14 +1,17 @@
 pipeline {
   agent any
-  
+
+  tools {
+    jdk 'Java 11'
+    gradle 'Gradle'
+  }
+
   stages {
     
     stage("build") {
       steps {
         echo 'Building the application (Gradle)'
-        withGradle() {
-            sh './gradle -version'
-        }
+        sh 'gradle -version'
       }
     }
      
