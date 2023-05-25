@@ -5,9 +5,12 @@ pipeline {
     
     stage("build") {
       steps {
-        echo 'Building the application..'
+        echo 'Building the application (Gradle)'
+        withGradle() {
+            sh './gradle -version'
+        }
       }
-     }
+    }
      
      stage("test") {
        steps {
@@ -25,5 +28,5 @@ pipeline {
 }
 
 node {
-  // grrovy
+  // groovy
 }
